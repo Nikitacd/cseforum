@@ -1,0 +1,14 @@
+<p><b>Title:</b><%= @question.title %></p>
+<p><b>Question:</b><%= @question.description %></p>
+<% for answer in @answers %>
+	<p><%= answer.body %></p>
+	<p>Likes: <%= answer.likes%></p>
+	<p>DisLikes: <%= answer.dislikes%></p>
+
+	<p><%= link_to  "Like", inc_likes_path(pass_answer: answer)  %></p>
+	<p><%= link_to  "DisLike", inc_dislike_path(pass_answer: answer) %></p>
+<% end %>
+<p><b>Answer:</b><%= simple_form_for ([@question, @question.answers.build]) do |f| %>
+	<%= f.input :body , label: false %>
+	<%= f.submit "Save",class: "btn btn-sm btn-warning" %>
+<% end %></p>

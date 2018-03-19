@@ -1,0 +1,4 @@
+<% for quest in @questions %>
+	<p><%= quest.title %>
+	<%= link_to "View", question_path(quest) %></p>
+<% end %>

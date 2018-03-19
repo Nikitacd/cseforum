@@ -1,0 +1,9 @@
+<%=simple_form_for @question do |f|%>
+<%= f.input :title,label:"QuestionTitle" %>
+<%= f.input :description,label:"Question Description" %>
+  <%= f.input :domain, as: :select, collection:['C','C++','DS','java','OS','CN','Other']  %>
+  <%= f.button :submit %>
+<% end %>
+
+
+

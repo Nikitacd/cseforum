@@ -58,7 +58,11 @@ gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails" 
 
+
 gem  'font-awesome-rails'
 
 gem 'simple_form'
+gem 'bootstrap-sass', '~> 3.3.7'
+
 gem 'devise'
+gem 'jquery-rails'
